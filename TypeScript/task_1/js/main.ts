@@ -24,3 +24,20 @@ const teacher3: Teacher = {
 
 // Log the teacher object
 console.log(teacher3);
+
+// Define the Directors interface
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
+// Create a director object
+const director1: Directors = {
+    firstName: 'John',
+    lastName: 'Doe',
+    location: 'London',
+    fullTimeEmployee: true,
+    numberOfReports: 17,
+};
+
+// Log the director object
+console.log(director1);
