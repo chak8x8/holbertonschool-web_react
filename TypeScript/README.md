@@ -1,7 +1,8 @@
 # Typescript
 ## Amateur
 **By**: Johann Kerbrat, Engineering Manager at Uber Works  
-**Weight**: 1
+**Weight**: 1  
+Manual QA review must be done (request it when you are done with the project)
 
 ## Description
 
@@ -37,9 +38,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 Please use these files for the following tasks
 
 ### `package.json`
-<details>
-<summary>Click to show/hide file contents</summary>
-```json
+```
 {
   "name": "typescript_dependencies",
   "version": "1.0.0",
@@ -75,12 +74,9 @@ Please use these files for the following tasks
   }
 }
 ```
-</details>
 
 ### `.eslintrc.js`
-<details>
-<summary>Click to show/hide file contents</summary>
-```javascript
+```
 module.exports =  {
   parser:  '@typescript-eslint/parser',
   extends:  [
@@ -95,12 +91,9 @@ module.exports =  {
   },
 }
 ```
-</details>
 
 ### `tsconfig.json`
-<details>
-<summary>Click to show/hide file contents</summary>
-```json
+```
 {
   "compilerOptions": {
     "outDir": "./dist/",
@@ -118,12 +111,9 @@ module.exports =  {
   }
 }
 ```
-</details>
 
 ### `webpack.config.js`
-<details>
-<summary>Click to show/hide file contents</summary>
-```javascript
+```
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -167,7 +157,6 @@ module.exports = {
   }
 };
 ```
-</details>
 
 ## Tasks
 
