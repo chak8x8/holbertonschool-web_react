@@ -42,17 +42,58 @@ const director1: Directors = {
 // Log the director object
 console.log(director1);
 
-// Keep Teacher and Directors interfaces, teacher3, director1 from Tasks 1-2
-
 // Define the printTeacherFunction interface
 interface printTeacherFunction {
-    // TODO: Define function signature
+    // Define function signature
+    (firstName: string, lastName: string): string;
 }
 
 // Define the printTeacher function
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
-    // TODO: Return first letter of firstName + ". " + lastName
+    // Return first letter of firstName + ". " + lastName
+    const letterOfFirstName = firstName.slice(0, 1);
+    return `${letterOfFirstName}. ${lastName}`
 };
 
 // Test the function
 console.log(printTeacher("John", "Doe")); // Should print: J. Doe
+
+
+// Interface for constructor
+interface StudentConstructor {
+    // Define constructor signature
+    new(firstName: string, lastName: string): StudentClassInterface;
+}
+
+// Interface for class
+interface StudentClassInterface {
+    // Define workOnHomework and displayName
+    workOnHomework(): string;
+    displayName(): string;
+}
+
+// Define the StudentClass
+class StudentClass implements StudentClassInterface {
+    // Define properties
+    firstName: string;
+    lastName: string;
+
+    // Define constructor
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    // Implement methods
+    workOnHomework(): string {
+        return "Currently working";
+    }
+    displayName(): string {
+        return `${this.firstName}`;
+    }
+}
+
+// Test the class
+const student = new StudentClass("John", "Doe");
+console.log(student.displayName()); // Should print: John
+console.log(student.workOnHomework()); // Should print: Currently working
