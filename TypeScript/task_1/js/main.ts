@@ -41,3 +41,18 @@ const director1: Directors = {
 
 // Log the director object
 console.log(director1);
+
+// Keep Teacher and Directors interfaces, teacher3, director1 from Tasks 1-2
+
+// Define the printTeacherFunction interface
+interface printTeacherFunction {
+    // TODO: Define function signature
+}
+
+// Define the printTeacher function
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+    // TODO: Return first letter of firstName + ". " + lastName
+};
+
+// Test the function
+console.log(printTeacher("John", "Doe")); // Should print: J. Doe
